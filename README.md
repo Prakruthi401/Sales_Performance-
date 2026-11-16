@@ -23,4 +23,4 @@ No API keys or database setup are needed. Filter orders by year, region, categor
 - `Superstore_Sales_Data_Analysis.pbix`: editable Power BI report; open with Power BI Desktop.
 - `Superstore_Sales_Data_Analysis.png`: saved dashboard image.
 
-The SQL and Power BI files are separate analysis artifacts, not services required by the Python dashboard. This repository does not yet include a verified hosted dashboard link. The data and findings are for practice, not forecasts or business advice.
+The SQL and Power BI files are separate analysis artifacts, not services required by the Python dashboard. Live demo: https://nwpyuswiqkq5ejjmgxrpzm.streamlit.app/ The data and findings are for practice, not forecasts or business advice.

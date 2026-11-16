@@ -7,6 +7,11 @@ from pathlib import Path
 # Page configuration
 st.set_page_config(page_title="Superstore Sales Analysis", layout="wide")
 
+# Keep full KPI amounts readable on narrower desktop screens.
+st.markdown("""<style>
+[data-testid="stMetricValue"] { font-size: 1.5rem; }
+</style>""", unsafe_allow_html=True)
+
 # Title
 st.title("Superstore Sales Performance Analysis")
 st.markdown("---")
