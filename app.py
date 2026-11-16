@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from datetime import datetime
+from pathlib import Path
 
 # Page configuration
 st.set_page_config(page_title="Superstore Sales Analysis", layout="wide")
@@ -14,7 +14,7 @@ st.markdown("---")
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_excel("DataSet/Superstore_Orders_Data.xlsx")
+    df = pd.read_excel(Path(__file__).resolve().parent / "DataSet" / "Superstore_Orders_Data.xlsx")
     df['Order_Date'] = pd.to_datetime(df['Order_Date'])
     df['Ship_Date'] = pd.to_datetime(df['Ship_Date'])
     df['Year'] = df['Order_Date'].dt.year
@@ -52,6 +52,10 @@ try:
         (df['Segment'].isin(selected_segments))
     ]
     
+    if filtered_df.empty:
+        st.info("No orders match these filters. Select at least one value in each filter.")
+        st.stop()
+
     # KPI Cards
     st.header("Key Performance Indicators")
     col1, col2, col3, col4 = st.columns(4)
@@ -174,7 +178,7 @@ try:
     st.subheader("Discount Impact on Profit")
     discount_impact = filtered_df.groupby(pd.cut(filtered_df['Discount'], 
                                                 bins=[0, 0.1, 0.2, 0.3, 0.4, 0.5, 1.0],
-                                                labels=['0-10%', '10-20%', '20-30%', '30-40%', '40-50%', '50%+']), observed=False).agg({
+                                                labels=['0-10%', '10-20%', '20-30%', '30-40%', '40-50%', '50%+'], include_lowest=True), observed=False).agg({
         'Profit': 'mean',
         'Sales': 'sum'
     }).reset_index()
