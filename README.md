@@ -2,6 +2,8 @@
 
 A sales-analysis learning project with SQL queries, a Power BI report, and a Streamlit dashboard. The dashboard uses the Excel dataset included in this repository; it is not connected to a business database.
 
+![Sales dashboard demo](assets/sales-app-demo.gif)
+
 ## Run the dashboard
 
 Use Python 3.11 or 3.12. From this repository:
