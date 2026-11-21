@@ -1,6 +1,7 @@
+**Live app:** https://nwpyuswiqkq5ejjmgxrpzm.streamlit.app/
+
 # Superstore Sales Performance Analysis
 
-**Live app:** https://nwpyuswiqkq5ejjmgxrpzm.streamlit.app/
 
 A sales-analysis learning project with SQL queries, a Power BI report, and a Streamlit dashboard. The dashboard uses the Excel dataset included in this repository; it is not connected to a business database.
 
