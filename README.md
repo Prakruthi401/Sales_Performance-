@@ -1,5 +1,7 @@
 # Superstore Sales Performance Analysis
 
+**Live app:** https://nwpyuswiqkq5ejjmgxrpzm.streamlit.app/
+
 A sales-analysis learning project with SQL queries, a Power BI report, and a Streamlit dashboard. The dashboard uses the Excel dataset included in this repository; it is not connected to a business database.
 
 ![Sales dashboard demo](assets/sales-app-demo.gif)
@@ -25,4 +27,4 @@ No API keys or database setup are needed. Filter orders by year, region, categor
 - `Superstore_Sales_Data_Analysis.pbix`: editable Power BI report; open with Power BI Desktop.
 - `Superstore_Sales_Data_Analysis.png`: saved dashboard image.
 
-The SQL and Power BI files are separate analysis artifacts, not services required by the Python dashboard. Live demo: https://nwpyuswiqkq5ejjmgxrpzm.streamlit.app/ The data and findings are for practice, not forecasts or business advice.
+The SQL and Power BI files are separate analysis artifacts, not services required by the Python dashboard. The data and findings are for practice, not forecasts or business advice.
